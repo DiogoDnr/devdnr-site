@@ -43,6 +43,7 @@ function initTerminalAnimation() {
   const lines = Array.from(terminalBody.querySelectorAll('p'));
   const savedHTML = lines.map(p => p.innerHTML);
 
+  terminalBody.style.minHeight = terminalBody.offsetHeight + 'px';
   lines.forEach(p => { p.style.opacity = '0'; });
 
   function typeHTML(el, html, onDone) {
