@@ -34,13 +34,16 @@ function typeWriter() {
 }
 typeWriter();
 
-// Terminal typing animation — types each line, loops every 60s
+// Terminal typing animation — starts when terminal enters view, loops every 60s
 function initTerminalAnimation() {
+  const terminal = document.querySelector('.terminal');
   const terminalBody = document.querySelector('.terminal-body');
-  if (!terminalBody) return;
+  if (!terminal || !terminalBody) return;
 
   const lines = Array.from(terminalBody.querySelectorAll('p'));
   const savedHTML = lines.map(p => p.innerHTML);
+
+  lines.forEach(p => { p.style.opacity = '0'; });
 
   function typeHTML(el, html, onDone) {
     el.innerHTML = '';
@@ -83,7 +86,16 @@ function initTerminalAnimation() {
     nextLine();
   }
 
-  runLoop();
+  const termObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        termObserver.unobserve(entry.target);
+        setTimeout(runLoop, 350);
+      }
+    });
+  }, { threshold: 0.4 });
+
+  termObserver.observe(terminal);
 }
 
 initTerminalAnimation();
@@ -165,6 +177,7 @@ const observer = new IntersectionObserver((entries) => {
     if (entry.isIntersecting) {
       entry.target.style.opacity = '1';
       entry.target.style.transform = 'translateY(0)';
+      observer.unobserve(entry.target);
     }
   });
 }, { threshold: 0.1 });
@@ -173,7 +186,7 @@ sections.forEach((section, index) => {
   if (index > 0) {
     section.style.opacity = '0';
     section.style.transform = 'translateY(30px)';
-    section.style.transition = 'all 0.6s ease-out';
+    section.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
     observer.observe(section);
   }
 });
