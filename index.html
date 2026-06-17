@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DevDnr | Full Stack Developer</title>
+  <link rel="icon" type="image/png" href="logo-devdnr.png" />   
+  <link rel="shortcut icon" href="logo-devdnr.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <nav class="navbar" id="navbar">
+    <div class="nav-content">
+      <a href="#" class="nav-logo">
+        <img src="logo-devdnr.png" alt="DevDnr" class="nav-logo-img" />
+      </a>
+      <div class="nav-links" id="nav-links">
+        <a href="#sobre">Sobre</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#contato">Contato</a>
+      </div>
+      <button class="nav-hamburger" id="nav-hamburger" aria-label="Abrir menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-bg-gradient"></div>
+    <div class="hero-grid"></div>
+    <div class="hero-glow-1"></div>
+    <div class="hero-glow-2"></div>
+
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        Disponível para novos projetos
+      </div>
+
+
+      <h1><img src="logo-devdnr.png" alt="DevDnr" class="hero-logo" /></h1>
+
+      <p class="hero-subtitle">
+        <span id="typing-text"></span><span class="blink">|</span>
+      </p>
+
+      <p class="hero-desc">
+        Transformando ideias em código limpo, performático e escalável.
+        Especialista em React, Node.js e soluções cloud-native.
+      </p>
+
+      <div class="hero-actions">
+        <a href="https://wa.me/5511947532300" target="_blank" rel="noopener" class="btn btn-primary">Solicitar Orçamento</a>
+        <a href="#projetos" class="btn btn-secondary">Ver Projetos</a>
+      </div>
+
+      <div class="hero-techs">
+        <span>React</span>
+        <span>Node.js</span>
+        <span>TypeScript</span>
+        <span>Tailwind</span>
+      </div>
+    </div>
+
+    <div class="scroll-indicator">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+      </svg>
+    </div>
+  </section>
+
+  <section id="sobre" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-number">&gt; 01</span>
+        <h2 class="section-title">Sobre</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-text">
+          <div class="terminal-header">
+            <span class="terminal-prompt">{">"} whoami</span>
+          </div>
+          <p class="about-paragraph">
+            Desenvolvedor full stack com paixão por criar experiências digitais
+            excepcionais. Especializado em construir aplicações web modernas com
+            React, Node.js e arquiteturas cloud-native.
+          </p>
+          <p class="about-paragraph about-paragraph-secondary">
+            Atualmente focado em desenvolvimento full stack, entregando soluções
+            que combinam performance, escalabilidade e uma experiência de
+            usuário impecável.
+          </p>
+        </div>
+
+        <div class="terminal">
+          <div class="terminal-bar">
+            <span class="terminal-dot red"></span>
+            <span class="terminal-dot yellow"></span>
+            <span class="terminal-dot green"></span>
+            <span class="terminal-label">terminal — devdnr</span>
+          </div>
+          <div class="terminal-body">
+            <p><span class="c-green">devdnr@site</span><span class="c-dim">:</span><span class="c-cyan">~</span><span class="c-dim">$</span> cat about.md</p>
+            <p class="c-dim">---</p>
+            <p><span class="c-cyan">nome:</span> Dev DNR</p>
+            <p><span class="c-cyan">role:</span> Full Stack Developer</p>
+            <p><span class="c-cyan">localização:</span> Brasil</p>
+            <p><span class="c-cyan">experiência:</span> 5+ anos</p>
+            <p><span class="c-cyan">stack:</span> React, Node, TypeScript, AWS</p>
+            <p class="c-dim">---</p>
+            <p><span class="c-green">devdnr@site</span><span class="c-dim">:</span><span class="c-cyan">~</span><span class="c-dim">$</span> <span class="blink">_</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="servicos" class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-number">&gt; 02</span>
+        <h2 class="section-title">Serviços</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skill-card">
+          <div class="skill-icon">🤖</div>
+          <h3 class="skill-name">Automação com IA e N8N</h3>
+          <p class="service-desc">Atendimento automático, agentes inteligentes, WhatsApp, Trello, Bling, Google Sheets e fluxos empresariais.</p>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">🌐</div>
+          <h3 class="skill-name">Criação de Sites</h3>
+          <p class="service-desc">Sites institucionais, landing pages, portfólios e páginas profissionais responsivas.</p>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">🛒</div>
+          <h3 class="skill-name">Lojas Virtuais</h3>
+          <p class="service-desc">E-commerce com catálogo, pedidos, pagamentos e integração com sistemas.</p>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">📱</div>
+          <h3 class="skill-name">Sistemas Web</h3>
+          <p class="service-desc">Sistemas personalizados para controle financeiro, produção, estoque, pedidos e gestão.</p>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">☁️</div>
+          <h3 class="skill-name">Integrações e APIs</h3>
+          <p class="service-desc">Conexão entre plataformas, ERPs, WhatsApp, planilhas, bancos de dados e automações.</p>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">📊</div>
+          <h3 class="skill-name">Dashboards</h3>
+          <p class="service-desc">Painéis com indicadores, relatórios, métricas e acompanhamento em tempo real.</p>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">🚀</div>
+          <h3 class="skill-name">Consultoria em Tecnologia</h3>
+          <p class="service-desc">Análise de processos e orientação para aplicar tecnologia no negócio.</p>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">🔧</div>
+          <h3 class="skill-name">Suporte e Melhorias</h3>
+          <p class="service-desc">Correções, otimizações, manutenção e evolução de sites, sistemas e automações.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projetos" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-number">&gt; 03</span>
+        <h2 class="section-title">Projetos</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="projects-grid">
+        <div class="project-card">
+          <div class="project-bar gradient-1"></div>
+          <div class="project-body">
+            <h3 class="project-title">SaaS Dashboard</h3>
+            <p class="project-desc">Plataforma de analytics em tempo real com React e GraphQL</p>
+            <div class="project-tags">
+              <span>React</span><span>GraphQL</span><span>Node.js</span><span>Docker</span>
+            </div>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-bar gradient-2"></div>
+          <div class="project-body">
+            <h3 class="project-title">E-commerce API</h3>
+            <p class="project-desc">API RESTful com microsserviços, cache e filas de processamento</p>
+            <div class="project-tags">
+              <span>Node.js</span><span>Redis</span><span>PostgreSQL</span><span>RabbitMQ</span>
+            </div>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-bar gradient-3"></div>
+          <div class="project-body">
+            <h3 class="project-title">DevOps Pipeline</h3>
+            <p class="project-desc">Pipeline CI/CD automatizado com testes, lint e deploy contínuo</p>
+            <div class="project-tags">
+              <span>AWS</span><span>Docker</span><span>GitHub Actions</span><span>Terraform</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contato" class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-number">&gt; 04</span>
+        <h2 class="section-title">Contato</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="contact-content">
+        <p class="contact-desc">
+          Vamos construir algo incrível juntos? Mande uma mensagem e retornarei em breve.
+        </p>
+
+        <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="27501d8b-007b-4421-b12a-2795d1ec7d33" />
+          <input type="hidden" name="subject" value="Nova mensagem pelo site DevDnr" />
+          <input type="hidden" name="redirect" value="false" />
+          <input type="hidden" name="from_name" value="Diogo Neves" />
+          <div class="form-row">
+            <input type="text" name="nome" placeholder="Nome" class="form-input" required />
+            <input type="email" name="email" placeholder="Email" class="form-input" required />
+            <input type="tel" name="telefone" placeholder="Telefone" class="form-input" />
+          </div>
+          <textarea name="mensagem" rows="4" placeholder="Mensagem" class="form-textarea" required></textarea>
+          <button type="submit" class="btn btn-primary btn-full">Enviar Mensagem</button>
+        </form>
+
+        <div class="contact-links">
+          <a href="https://github.com/DiogoDnr?tab=repositories" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://www.linkedin.com/in/diogonevesr" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="mailto:diogo@devdnr.com.br">Email</a>
+          <a href="https://wa.me/5511947532300" target="_blank" rel="noopener">WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-content">
+      <span class="footer-left">&copy; 2026 devdnr</span>
+      <span class="footer-right">&lt;feito com código&gt;</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
