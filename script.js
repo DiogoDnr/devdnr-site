@@ -20,7 +20,7 @@ navLinks.querySelectorAll('a').forEach(link => {
   });
 });
 
-// Typing effect
+// Typing effect — hero subtitle
 const typingText = document.getElementById('typing-text');
 const fullText = 'Desenvolvedor Full Stack';
 let i = 0;
@@ -33,6 +33,60 @@ function typeWriter() {
   }
 }
 typeWriter();
+
+// Terminal typing animation — types each line, loops every 60s
+function initTerminalAnimation() {
+  const terminalBody = document.querySelector('.terminal-body');
+  if (!terminalBody) return;
+
+  const lines = Array.from(terminalBody.querySelectorAll('p'));
+  const savedHTML = lines.map(p => p.innerHTML);
+
+  function typeHTML(el, html, onDone) {
+    el.innerHTML = '';
+    el.style.opacity = '1';
+    let pos = 0;
+
+    function step() {
+      if (pos >= html.length) { onDone && onDone(); return; }
+      if (html[pos] === '<') {
+        const end = html.indexOf('>', pos);
+        el.innerHTML = html.slice(0, end + 1);
+        pos = end + 1;
+        setTimeout(step, 0);
+      } else {
+        el.innerHTML = html.slice(0, pos + 1);
+        pos++;
+        setTimeout(step, 28);
+      }
+    }
+    step();
+  }
+
+  function runLoop() {
+    lines.forEach((p, idx) => {
+      p.style.opacity = '0';
+      p.innerHTML = savedHTML[idx];
+    });
+
+    let idx = 0;
+    function nextLine() {
+      if (idx >= lines.length) {
+        setTimeout(runLoop, 60000);
+        return;
+      }
+      const line = lines[idx];
+      const html = savedHTML[idx];
+      idx++;
+      typeHTML(line, html, () => setTimeout(nextLine, 120));
+    }
+    nextLine();
+  }
+
+  runLoop();
+}
+
+initTerminalAnimation();
 
 // Service cards entrance animation
 const skillCards = document.querySelectorAll('.skill-card');
